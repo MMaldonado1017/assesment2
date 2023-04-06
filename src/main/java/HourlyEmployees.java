@@ -1,24 +1,27 @@
-public class HourlyEmployees extends Employees {
-    private double hourlyWage;
-    private double weeklyHours;
+public class HourlyEmployees extends Employees implements Worker {
+    private double hourlyRate;
+    private double hoursWorked;
 
-    public HourlyEmployees(String name, double hourlyWage, double hoursWorked) {
-        super(name);
-
-        this.hourlyWage = hourlyWage;
-        this.weeklyHours = weeklyHours;
+    public HourlyEmployees(String name, double hourlyRate, double hoursWorked, Cloth[] clothingItems) {
+        super(name, clothingItems);
+        this.hourlyRate = hourlyRate;
+        this.hoursWorked = hoursWorked;
     }
 
     public double getHourlyRate() {
-        return this.hourlyWage;
+
+        return this.hourlyRate;
     }
 
     public double getHoursWorked() {
-        return this.weeklyHours;
+
+        return this.hoursWorked;
     }
 
-    public double calculatePay() {
-        return this.hourlyWage * this.weeklyHours;
+
+    @Override
+    public void calculatePay() {
+        System.out.println(getName() + " an Hourly employees's  Pay is : "+ (getHourlyRate() * getHourlyRate() * 52  ));
     }
 }
 

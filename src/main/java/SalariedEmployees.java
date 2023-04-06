@@ -1,9 +1,8 @@
-public class SalariedEmployees extends Employees {
+public class SalariedEmployees extends Employees implements Worker  {
     private double salary;
 
-    public SalariedEmployees(String name,double salary) {
-        super(name);
-
+    public SalariedEmployees(String name, double salary, Cloth[] clothingItems) {
+        super(name, clothingItems);
         this.salary = salary;
     }
 
@@ -11,10 +10,14 @@ public class SalariedEmployees extends Employees {
         return this.salary;
     }
 
-    public double calculatePay() {
-        return this.salary;
+
+    @Override
+    public void calculatePay() {
+        System.out.println(getName()+ "  a Salaried Employee pay is :" + getSalary());
+
     }
 }
+
 
 
 

@@ -1,19 +1,22 @@
-public abstract class Employees {
-    private static int badegeIDNumber = 1;
+public abstract class Employees extends Person {
+    private static int badgeIDNumber = 1;
     private int badgeID;
 
-    public Employees(String name) {
-        this.badgeID = badegeIDNumber++;
+    public Employees(String name, Cloth[] clothingItems) {
+        super(name, clothingItems);
+        this.badgeID = badgeIDNumber;
     }
 
-    public int getId() {
+
+    public int getBadgeIDNumber() {
         return this.badgeID;
     }
 
-    public abstract double calculatePay();
+
 
     public void printBadge() {
-        System.out.println("Employee ID: " + this.getId());
+
+        System.out.println(getName()  +"  Employee ID: " + this.getBadgeIDNumber());
     }
 }
 
