@@ -32,7 +32,7 @@ public class Entrepreneurs extends Person implements Worker {
 
     @Override
     public void calculatePay() {
-        System.out.println( getName()+ "'s an Entreprenuer his pay is : " + (getRevenue() - getExpenses()));
+        System.out.println( getName()+ " is an Entreprenuer. his pay is: $" + (getRevenue() - getExpenses()));
     }
 
     @Override

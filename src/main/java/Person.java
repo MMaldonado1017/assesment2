@@ -25,6 +25,8 @@ public abstract class Person implements Discount{
             worker.calculatePay();
         }
 
+
+
 //        public double calculateDiscount() {
 //            double discount = 0.1;
 //            if (this instanceof Manager) {

@@ -8,7 +8,7 @@ public abstract class Employees extends Person {
 
     public Employees(String name, Cloth[] clothingItems) {
         super(name, clothingItems);
-        this.badgeID = badgeIDNumber;
+        this.badgeID = badgeIDNumber++;
     }
 
 
@@ -20,7 +20,7 @@ public abstract class Employees extends Person {
 
     public void printBadge() {
 
-        System.out.println(getName()  +"  Employee ID: " + this.getBadgeIDNumber());
+        System.out.println(getName()  +" Employee ID: " + this.getBadgeIDNumber());
     }
 }
 

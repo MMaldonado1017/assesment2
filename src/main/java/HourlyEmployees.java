@@ -23,7 +23,7 @@ public class HourlyEmployees extends Employees implements Worker {
 
     @Override
     public void calculatePay() {
-        System.out.println(getName() + " an Hourly employees's  Pay is : "+ (getHourlyRate() * getHourlyRate() * 52  ));
+        System.out.println(getName() + ", an Hourly Employees's  pay is: $"+ (getHourlyRate() * getHourlyRate() * 52  ));
     }
 
     @Override

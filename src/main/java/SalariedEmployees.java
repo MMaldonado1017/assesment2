@@ -15,7 +15,7 @@ public class SalariedEmployees extends Employees implements Worker  {
 
     @Override
     public void calculatePay() {
-        System.out.println(getName()+ "  a Salaried Employee pay is :" + getSalary());
+        System.out.println(getName()+ ", a Salaried Employee's pay is: $" + getSalary());
 
     }
 
