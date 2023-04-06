@@ -1,6 +1,6 @@
 package thestore.src.main.java;
 
-public class Cloth{
+public class Cloth {
     public double getPrice;
     private String description;
     private double price;

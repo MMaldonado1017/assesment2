@@ -9,6 +9,7 @@ public abstract class Person implements Discount{
         this.clothingItems = clothingItems;
     }
 
+
     public String getName() {
         return this.name;
     }
