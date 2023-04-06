@@ -1,7 +1,10 @@
+package thestore.src.main.java;
+
 public class Entrepreneurs extends Person implements Worker {
 
     private double revenue;
     private double expenses;
+    private final double entreDisc = .02;
     public Entrepreneurs(String name, double revenue, double expenses, Cloth[] clothingItems) {
         super(name, clothingItems);
         this.revenue = revenue;
@@ -23,9 +26,6 @@ public class Entrepreneurs extends Person implements Worker {
     }
 
 
-
-
-
     public String toString() {
         return "Entrepreneur " + getName() + " with revenue " + getRevenue() + " and expenses " + getExpenses();
     }
@@ -33,6 +33,11 @@ public class Entrepreneurs extends Person implements Worker {
     @Override
     public void calculatePay() {
         System.out.println( getName()+ "'s an Entreprenuer his pay is : " + (getRevenue() - getExpenses()));
+    }
+
+    @Override
+    public void calculateDiscount() {
+        System.out.println(entreDisc);
     }
 }
 

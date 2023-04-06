@@ -1,3 +1,5 @@
+package thestore.src.main.java;
+
 public class SalariedEmployees extends Employees implements Worker  {
     private double salary;
 
@@ -15,6 +17,11 @@ public class SalariedEmployees extends Employees implements Worker  {
     public void calculatePay() {
         System.out.println(getName()+ "  a Salaried Employee pay is :" + getSalary());
 
+    }
+
+    @Override
+    public void calculateDiscount() {
+        System.out.println();
     }
 }
 
