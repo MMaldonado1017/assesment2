@@ -1,11 +1,14 @@
-public abstract class  Person {
+public abstract class  Person implements Discounts{
     private String name;
     private Cloth[] clothingItems;    //added for homework
 
+
     public Person(String name, Cloth[] clothingItems) {
         this.name = name;
-        this.clothingItems = clothingItems;
+        this.clothingItems=clothingItems;
+
     }
+
 
     public String getName() {
         return this.name;
@@ -24,19 +27,9 @@ public abstract class  Person {
 
     }
 
-    public double calculateDiscount() {
-        double discount = 0.1;
-        if (this instanceof Manager) {
-            discount += 0.05;
-        } else if (this instanceof Entrepreneurs) {
-            discount += 0.02;
-        }
-        double totalDiscount = 0.0;
-        for (Cloth item : this.clothingItems) {
-            totalDiscount += item.getPrice() * discount;
-        }
-        return totalDiscount;
-    }
+
+
+
 }
 
 

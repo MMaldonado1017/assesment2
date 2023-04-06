@@ -1,4 +1,4 @@
-public class SalariedEmployees extends Employees implements Worker  {
+public class SalariedEmployees extends Employees implements Worker {
     private double salary;
 
     public SalariedEmployees(String name, double salary, Cloth[] clothingItems) {
@@ -14,6 +14,12 @@ public class SalariedEmployees extends Employees implements Worker  {
     @Override
     public void calculatePay() {
         System.out.println(getName()+ "  a Salaried Employee pay is :" + getSalary());
+
+    }
+
+    @Override
+    public void calculateDiscount() {
+        ;
 
     }
 }

@@ -6,8 +6,8 @@ public class Cloth{
         this.description = description;
         this.price = price;
 
-
-
-
+    }
+    public double getPrice(){
+        return price;
     }
 }

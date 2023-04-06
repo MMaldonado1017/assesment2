@@ -2,6 +2,7 @@ public class Entrepreneurs extends Person implements Worker {
 
     private double revenue;
     private double expenses;
+    private final double entreDiscount=.15;
     public Entrepreneurs(String name, double revenue, double expenses, Cloth[] clothingItems) {
         super(name, clothingItems);
         this.revenue = revenue;
@@ -33,6 +34,11 @@ public class Entrepreneurs extends Person implements Worker {
     @Override
     public void calculatePay() {
         System.out.println( getName()+ "'s an Entreprenuer his pay is : " + (getRevenue() - getExpenses()));
+    }
+
+    @Override
+    public void calculateDiscount() {
+
     }
 }
 

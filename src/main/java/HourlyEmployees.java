@@ -23,6 +23,11 @@ public class HourlyEmployees extends Employees implements Worker {
     public void calculatePay() {
         System.out.println(getName() + " an Hourly employees's  Pay is : "+ (getHourlyRate() * getHourlyRate() * 52  ));
     }
+
+    @Override
+    public void calculateDiscount() {
+
+    }
 }
 
 
